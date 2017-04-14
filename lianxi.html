@@ -63,6 +63,7 @@
 <input type="text" id="chushu"/>
 <button id="jisuan" class="btn">计算</button>
 <script>
+
     //函数除法方法开始
 /*        function add(i, j) {
      if (j == 0) {
@@ -220,7 +221,7 @@
             document.write("<br/>");
         }*/
 
-
+//九九乘法口诀表开始
 /*        for (var i = 0; i<=10; i++) {
             if (i = 5) {
                 break;
@@ -304,6 +305,8 @@ var htmlStr = '';
     }
     alert(getSun(1, 4));*/
 //    普通判断结束
+
+
 //    节俭判断开始
 /*    function getSun(n, m) {
         var sum = 0;
@@ -319,7 +322,9 @@ var htmlStr = '';
     }
     console.log(getSun(1, 1));*/
 //    节俭判断结束
+
 //函数作用域结束
+
 
 //    计算圆的面积函数开始
 /*    function getCircleArea(r) {
@@ -334,15 +339,19 @@ var htmlStr = '';
     }
     console.log(getRectArea(100, 100))*/
 //    计算长方形面积结束
+
+
+
 /*    var information = function (name, age, home, sex, bobys, skill) {
         this.name = name,
         this.age = age,
         this.home = home,
         this.sex = sex,
         this.bobys = bobys,
-        this.skill = skill*/
+        this.skill = skill
+        }*/
 //        键         值
-    }
+
 
     //数据类型开始
 /*    var zhege = {
@@ -380,6 +389,354 @@ var htmlStr = '';
     zhege.eat(['鸭腿', '雪碧']);*/
     //数据类型结束
 
+
+    //是否含有子字符串的方法开始
+/*    function find(str, searchStr) {
+        return str.indexOf(searchStr) != -1;
+    }
+    var resultB = find('一张网页，要经历怎样的过程才能抵达用户面前?', '用户');
+    console.log(resultB);
+    var resultA = find('一张网页，要经历怎样的过程才能抵达用户面前?', '前端');
+    console.log(resultA);*/
+    //是否含有子字符串的方法结束
+
+    //统计字符出现次数的函数开始
+/*    var str = '我今天咋淘宝网上淘了一本书，我真的喜欢上淘宝，基本每天都在上淘宝'
+    function getWordCount(str, findStr) {
+        var count = 0;
+        var index = str.indexOf(findStr);
+
+        while(index != -1) {
+            count++;
+            index = str.indexOf(findStr, index + 1);
+        }
+
+        return count;
+    }
+
+    var str = '我今天在淘宝网淘了一本书，我真的很喜欢上淘宝，基本每天都上淘宝';
+    getWordCount(str, '淘宝');//3
+    getWordCount(str, '淘');//4
+    getWordCount(str, '天气');//0*/
+    //统计字符出现次数的函数结束
+
+/*    var num = 0;
+    while (num <= 500) {
+        num++;
+        if (num == 200) {
+            continue;
+        }
+        console.log(num);
+    }*/
+
+    //截取身份证生日
+/*    var str = '110226198501272116';
+    console.log(str.substring(6, 14));*/
+
+    //返回大写不改变原来的字符串
+/*    var str = 'hello';
+    var upperCase = str.toUpperCase();
+    var lowerCase = str.toLowerCase();
+    console.log(upperCase);//HELLO
+    console.log(lowerCase);//hello*/
+
+    //返回数组 不改变原来的字符串
+/*    var str = 'How are you doing today';
+    var arr = str.split(' ');
+    console.log(arr);//["How", "are", "you", "doing", "today"]*/
+
+    //拆分字符串变数组
+/*
+    var str = '122270672.1487387617102624128897.1487387617.1492044533.1492051230.129';
+    var arr = str.split('.');
+    var str2 = arr[1][0];
+    console.log(arr);//["122270672", "1487387617102624128897", "1487387617", "1492044533", "1492051230", "129"]
+    console.log(str2);//1
+    var arr2 = str.split('.', 2);
+    console.log(arr2);//["122270672", "1487387617102624128897"]
+    var str3 = str.replace('1222', '3333');//
+    console.log(str3);//333370672.1487387617102624128897.1487387617.1492044533.1492051230.129
+    var str4 = str.concat(str2, str3);
+    console.log(str4);//333370672.1487387617102624128897.1487387617.1492044533.1492051230.129lianxi.html?_ijt=ue6lngg0jhrqqo0f5k0eugk651:459 122270672.1487387617102624128897.1487387617.1492044533.1492051230.1291333370672.1487387617102624128897.1487387617.1492044533.1492051230.129
+*/
+
+//    重复字符串练习
+/*    function backStr(str, num) {
+        var result = '';
+        if (num > 0) {
+            for (var i = 0; i < num; i++) {
+                result += str;
+            }
+        }
+        return result;
+    }
+    console.log(backStr('*', 3));//!***
+    console.log(backStr('abc', 3));//abcabcabc
+    console.log(backStr('abc', 4));//abcabcabcabc
+    console.log(backStr('abc', 1));//abc
+    console.log(backStr('*', 8));//!********
+    console.log(backStr('abc', -2));//*/
+
+    //数组
+
+    //棋盘的二维数组布局
+/*    var a = ['张三', '李四', '王五'];
+    var qipan = [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    ];
+    console.log(qipan[2][3]);*/
+
+    //数组的操作方法
+/*    var arr = ['apple', 'orange'];
+    arr.push('banana');//返回数组长度
+    var fruit = arr.pop;
+    console.log(fruit);//banana
+    var shift = */
+
+/*    var fruitStr = 'Apple&Pear&Banana&Orange&Mongo';
+    var result = fruitStr.split('&');
+    console.log(result.join('-'));*/
+
+/*    var arr = ['Apple', 'Banana', 'Orange', 'pear'];
+    var newArr = arr.slice(1, 2);
+    console.log(newArr);
+    console.log(arr);*/
+
+/*    var str = '我是一个大好人'
+    var arr = str.split('');
+    var arr1 = arr.reverse();
+    console.log(arr1.join(''));*/
+
+    //数组获取数组中正数的方法
+/*    var getBigger0 = [-1,-2, -333, 0, 1, 2, 3, 4];
+    function getBig0(arr) {
+        var resultArr = []
+        for (var i = 0; i<arr.length; i++){
+            if (arr[i] > 0) {
+                resultArr.push(arr[i]);
+            }
+        }
+        return resultArr;
+    }
+    console.log(getBig0(getBigger0));*/
+/*    var getBigger0 = [-1,-2, -333, 0, 1, 2, 3, 4];
+    function getBiggest(arr) {
+        for (var i = 0; i<arr.length; i++) {
+            if (arr[i] >= arr[i+1]) {
+                arr.splice(0, i+1);
+            }
+            else{
+                arr.splice(0, i)
+            }
+        }
+        return arr[0];
+    }
+    console.log(getBiggest(getBigger0));*/
+/*    var arr1 = [1, 2, 3, 4];
+    var arr2 = ['a', 'b', 'c', 1];
+    function contact(arr1, arr2) {
+        var result = [];
+            for (var i = 0; i < arr1.length; i++) {
+                result.push(arr1[i]);
+            }
+            for (var i = 0; i < arr2.length; i++) {
+                result.push(arr2[i]);
+            }
+        return result;
+    }
+    console.log(contact(arr1, arr2));*/
+
+/*    var arr1 = [1, 2, 3, 4];
+    var arr2 = ['a', 'b', 'c', 1];
+    function concat1(arr1, arr2) {
+        return(arr1.concat(arr2));
+    }
+    console.log(concat1(arr1, arr2));
+    console.log(arr1);
+    console.log(arr2);*/
+
+/*    var apple = [5]
+    function add() {
+        console.log(apple);
+        var apple = [];
+    }
+    add();*/
+
+
+
+    //数组去重的函数
+/*    var removeRepeat =[1, 2, 4, 4, 3, 3, 3, 52, 6, 21, 1];
+    function removeRepeatArr(arr) {
+        var result = [];
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = i+1; j < arr.length; j++) {
+                if (arr[i] == arr[j])
+                result.push(arr[j]);
+            }
+        }
+        for (var k = 0; k < arr.length; k++) {
+            for (var j = 0; j < result.length; j++) {
+                if (arr[k] == result[j]){
+                    arr.splice(k-1,1);
+                }
+            }
+        }
+        return arr;
+    }
+    console.log(removeRepeatArr(removeRepeat));*/
+
+
+    //计算数组中的字符出现的个数
+/*    var counts = [1, 2, 4, 4, 3, 4, 3];
+    function count(arr, item) {
+        var items = 0;
+        for (var i = 0; i< arr.length; i++) {
+            if (arr[i] == item) {
+                items++;
+            }
+        }
+        return items;
+    }
+    console.log(count(counts, 4));*/
+
+
+
+    //计算数组中所有元素的总和
+/*    var sum = [1, 2, 3, 4, 6, 7];
+    function arraySum(arr) {
+        var result = 0;
+        for (var i = 0; i< arr.length; i++) {
+            result = result + arr[i];
+        }
+        return result;
+    }
+    console.log(arraySum(sum));*/
+
+
+
+    //求数组最小值得函数
+/*    var array = [1, -4, -5, 5, 0, 2, 3];
+    function minArray(arr) {
+        var sum = arr[0];
+        for (var i = 0; i < arr.length; i++) {
+            if (sum > arr[i]) {
+                sum = arr[i];
+            }
+        }
+        return sum;
+    }
+    console.log(minArray(array));*/
+
+
+
+    //首字母大写的函数
+/*    function firstLetterToUpperCase(str) {
+        if (isNaN(str)) {
+            var str1 = '';
+            str1 = str1 +str.substring(0,1).toUpperCase() + str.substring(1);
+            console.log(str1);
+        }
+        else{
+            console.log(str);
+        }
+    }
+    firstLetterToUpperCase('sum');//输出sum
+    firstLetterToUpperCase('hello'); // 输出 'Hello'
+    firstLetterToUpperCase('World'); // 输出 'World'
+    firstLetterToUpperCase(344);//输出344*/
+
+
+
+    //提取字符串里面的数字然后求和
+/*    var str = 'We have 30 apples will be handed out to 10 students who need it, containing 5 foreigners'
+    function inStrShuZiQiuHe(str) {
+        var arr = str.split(' ');
+        var arr1 = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (!isNaN(parseInt(arr[i]))) {
+                arr1.push(arr[i]);
+            }
+        }
+        var sum = 0;
+        for (var j = 0; j< arr1.length; j++) {
+            sum = parseInt(arr1[j]) + sum;
+        }
+        console.log(sum);
+    }
+    inStrShuZiQiuHe(str);*/
+
+
+
+    //删除字符串中所有的数字
+/*    function removeNum(str) {
+        var str1 = '';
+        for (var i = 0; i < str.length; i++) {
+            if (isNaN(parseInt(str.charAt(i)))) {
+                str1 = str1 + str.charAt(i);
+            }
+        }
+        console.log(str1);
+    }
+    removeNum('ssssssss344343sdfsdfsfsdf');*/
+
+
+
+    //将字符串中_后面的小并且删除写字母变大写，并且删除_
+/*    function toCamelStyle(str) {
+        var items = str.split('_');
+        var items1 = '';
+        var items2 = '';
+        if (items[0] == '') {
+            items.shift();
+            items.unshift('_');
+            for (var i = 0; i < items.length; i++) {
+                items1 = items1 + items[i][0].toUpperCase() + items[i].substr(1);
+            }
+            items2 = items1[1].toLowerCase();
+            var sum = items1.split('');
+            sum.shift();
+            sum.unshift(items2);
+            sum.unshift('_');
+            var result = sum.join('');
+        }
+        else{
+            for (var i = 0; i < items.length; i++) {
+                items1 = items1 + items[i][0].toUpperCase() + items[i].substr(1);
+            }
+            items2 = items1[0].toLowerCase();
+            var sum = items1.split('');
+            sum.shift();
+            sum.unshift(items2);
+            var result = sum.join('');
+        }
+        console.log(result);
+    }
+    toCamelStyle('a_sdfsaf_sdfasdf');
+    toCamelStyle('abc_bcd');  // 输出 'abcBcd'
+    toCamelStyle('a_3_c_d_ef');  // 输出 'a3CDEf'
+    toCamelStyle('_a_b_c_d_ef');  // 输出 '_aBCDEf'*/
+
+
+
+    //反转字符串
+/*    function reverseStr(str) {
+        var arr = str.split("");
+        var arr2 = [];
+        for (var i =0; i < arr.length; i++) {
+            arr2.unshift(arr[i]);
+        }
+        console.log(arr2);
+    }
+    reverseStr('asdf');*/
 </script>
 </body>
 </html>
