@@ -6,46 +6,47 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!--<link rel="stylesheet" href="css/common.css">-->
-<!--    <style type="text/css">
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-        }
+    <!--    <style type="text/css">
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
 
-        li {
-            width: 100px;
-            height: 200px;
-            text-align: center;
-            line-height: 200px;
-            background: #f0f;
-            font-size: 26px;
-            font-weight: bold;
-            margin: 2px;
-        }
+            li {
+                width: 100px;
+                height: 200px;
+                text-align: center;
+                line-height: 200px;
+                background: #f0f;
+                font-size: 26px;
+                font-weight: bold;
+                margin: 2px;
+            }
 
-        #txt {
-            border: 2px solid #ffd927;
-            width: 100px;
-            height: 50px;
-            font-size: 24px;
-        }
+            #txt {
+                border: 2px solid #ffd927;
+                width: 100px;
+                height: 50px;
+                font-size: 24px;
+            }
 
-        body {
-            font-size: 20px;
-        }
+            body {
+                font-size: 20px;
+            }
 
-        button {
-            width: 100px;
-            height: 50px;
-            background: #f8f4ff;
-            color: #c6ff27;
-            font-size: 20px;
-            border-radius: 50%;
-        }
-    </style>-->
+            button {
+                width: 100px;
+                height: 50px;
+                background: #f8f4ff;
+                color: #c6ff27;
+                font-size: 20px;
+                border-radius: 50%;
+            }
+        </style>-->
 
 </head>
 <body>
@@ -65,7 +66,7 @@
 <script>
 
     //函数除法方法开始
-/*        function add(i, j) {
+    /*        function add(i, j) {
      if (j == 0) {
      alert('被除数不能为0');
      return;//不写return会返回infinite。
@@ -76,667 +77,793 @@
 
 
     //获取input开始
-/*    var jiSuanBtn = document.getElementById('jisuan');
-    jiSuanBtn.onclick = function () {
-        var chuShu = document.getElementById('chushu').value;
-        var beiChusShu = document.getElementById('beichushu').value;
-        var result = add(beiChusShu, chuShu);
-        alert(result);
-    }*/
+    /*    var jiSuanBtn = document.getElementById('jisuan');
+     jiSuanBtn.onclick = function () {
+     var chuShu = document.getElementById('chushu').value;
+     var beiChusShu = document.getElementById('beichushu').value;
+     var result = add(beiChusShu, chuShu);
+     alert(result);
+     }*/
     //获取input结束
 
     //函数声明开始
-/*    chuFajiSuan(3, 4);
-    function chuFajiSuan(a, b) {
-        alert(a / b);
-    }*/
+    /*    chuFajiSuan(3, 4);
+     function chuFajiSuan(a, b) {
+     alert(a / b);
+     }*/
     //函数声明结束
 
     //函数表达式开始
-/*    var chuFajiSuan = function (a, b) {
-        return a / b;
-    }*/
+    /*    var chuFajiSuan = function (a, b) {
+     return a / b;
+     }*/
     //函数表达式和函数声明的区别是
     //函数声明会全局声明
     //函数表达式只能在后面使用
     //函数表达式结束
 
 
+    //js判断语句if判断进网站开始
+    /*           var time = 19
+     var isVip = false
+     var isGirl = true
+     if (!isGirl) {
+     alert('不能进')
+     } else {
+     if ((isVip || time >= 17 && time < 21)) {
+     alert('欢迎进入网站')
+     if (isVip) {
+     alert('尊敬的VIP用户,恭喜您获得一辆跑车')
+     } else {
+     alert('请您及时办理VIP,办理之后我们会送您跑车')
+     }
+     } else {
+     alert('不能进')
+     }
+     }*/
+    //js判断语句if判断进网站结束
 
-//js判断语句if判断进网站开始
-/*           var time = 19
-            var isVip = false
-            var isGirl = true
-            if (!isGirl) {
-                alert('不能进')
-            } else {
-                if ((isVip || time >= 17 && time < 21)) {
-                    alert('欢迎进入网站')
-                    if (isVip) {
-                        alert('尊敬的VIP用户,恭喜您获得一辆跑车')
-                    } else {
-                        alert('请您及时办理VIP,办理之后我们会送您跑车')
-                    }
-                } else {
-                    alert('不能进')
-                }
-            }*/
- //js判断语句if判断进网站结束
+    //吃饭if判断开始
+    /*            function add() {
+     var day = document.getElementById('item').value
+     if(day>=1 && day<3){
+     alert('去一食堂');
+     } else if(day>=3 && day<5){
+     alert('去第二食堂');
+     } else if(day == 7){
+     alert('去秦岭人家')
+     } else if(day>=5 && day<=7){
+     alert('去第三食堂');
+     } else{
+     alert('请输入1-7之内数字')
+     }
+     }*/
+    //吃饭if判断结束
 
-//吃饭if判断开始
-/*            function add() {
-                var day = document.getElementById('item').value
-                if(day>=1 && day<3){
-                    alert('去一食堂');
-                } else if(day>=3 && day<5){
-                    alert('去第二食堂');
-                } else if(day == 7){
-                    alert('去秦岭人家')
-                } else if(day>=5 && day<=7){
-                    alert('去第三食堂');
-                } else{
-                    alert('请输入1-7之内数字')
-                }
-            }*/
-//吃饭if判断结束
+    //三元运算符开始
+    /*            var a = 2;
+     var result = (a===2)?'a is a two':'a is not two';
+     var b = 456;
+     if (b > 400) {
+     b = 400
+     } else {
+     b = a < 200 ? 200 : a
+     }
+     alert(result);*/
+    //三元运算符结束
 
-//三元运算符开始
-/*            var a = 2;
-            var result = (a===2)?'a is a two':'a is not two';
-            var b = 456;
-            if (b > 400) {
-                b = 400
-            } else {
-                b = a < 200 ? 200 : a
-            }
-            alert(result);*/
-//三元运算符结束
-
-//去哪里吃饭while判断开始
-/*    function add() {
-        var day = parseInt(document.getElementById('txt').value);//不在循环内部得不到全局变量
-        switch (day) {
-            case 1:
-            case 2:
-                alert('一食堂');
-                break;
-            case 3:
-            case 4:
-                alert('二食堂');
-                break;
-            case 5:
-            case 6:
-                alert('三食堂');
-                break;
-            case 7:
-                alert('秦岭人家');
-                break;
-        }
-    }*/
-//去哪里吃饭while判断结束
-
-
-//随机数开始
-/*    for (var a = 100; a <= 20000; a++) {
-        console.log(Math.random() * 215 + '<br>');
-    }*/
-//随机数结束
-
-// 打印偶数开始
-/*    var i = 100;
-    while (i <= 200) {
-        document.write(i + '<br>');
-        i += 2;
-    }*/
-//      打印偶数结束
-
-//        打印星星开始
-/*        var i = 1, str = '';
-        do{
-            str = str + 'The number is' + i + '<br>';
-            i++;
-        } while(i < 5);
-        document.write(str);*/
-//        打印星星结束
+    //去哪里吃饭while判断开始
+    /*    function add() {
+     var day = parseInt(document.getElementById('txt').value);//不在循环内部得不到全局变量
+     switch (day) {
+     case 1:
+     case 2:
+     alert('一食堂');
+     break;
+     case 3:
+     case 4:
+     alert('二食堂');
+     break;
+     case 5:
+     case 6:
+     alert('三食堂');
+     break;
+     case 7:
+     alert('秦岭人家');
+     break;
+     }
+     }*/
+    //去哪里吃饭while判断结束
 
 
+    //随机数开始
+    /*    for (var a = 100; a <= 20000; a++) {
+     console.log(Math.random() * 215 + '<br>');
+     }*/
+    //随机数结束
 
-//计算如何打印 一元 五元 二元 拼凑的20的方法开始
-/*        for (var i = 0; i <=20; i++){
-            for ( var j = 0; j <= 10; j++){
-                for (var k = 0; k <= 4; k++) {
-                    if(i * 1 + j * 2 + k * 5 == 20){
-                        document.write('i的值是' + i + 'j的值是' + j + 'k的值是' + k + '<br>')
-                    }
-                }
-            }
-        }*/
-//计算如何打印 一元 五元 二元 拼凑的20的方法结束
+    // 打印偶数开始
+    /*    var i = 100;
+     while (i <= 200) {
+     document.write(i + '<br>');
+     i += 2;
+     }*/
+    //      打印偶数结束
 
-//九九乘法口诀表开始
-/*        for (var i = 1; i <= 9; i++) {
-            for (var j = 1; j <= i; j++) {
-                document.write(i + '*' + j + '=' + i * j + "&nbsp;");
-            }
-            document.write("<br/>");
-        }*/
+    //        打印星星开始
+    /*        var i = 1, str = '';
+     do{
+     str = str + 'The number is' + i + '<br>';
+     i++;
+     } while(i < 5);
+     document.write(str);*/
+    //        打印星星结束
 
-//九九乘法口诀表开始
-/*        for (var i = 0; i<=10; i++) {
-            if (i = 5) {
-                break;
-            }
-            console.log(i);
-        }*/
-//九九乘法口诀表结束
 
-//遍历数组开始
-/*
-        var arr = [14, 52, 67, 145, 60, 250, 529, 4, 80];
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i] < 100) {
-                console.log(arr[i]);
-                break;
-            }
-        }
-*/
-//遍历数组结束
+    //计算如何打印 一元 五元 二元 拼凑的20的方法开始
+    /*        for (var i = 0; i <=20; i++){
+     for ( var j = 0; j <= 10; j++){
+     for (var k = 0; k <= 4; k++) {
+     if(i * 1 + j * 2 + k * 5 == 20){
+     document.write('i的值是' + i + 'j的值是' + j + 'k的值是' + k + '<br>')
+     }
+     }
+     }
+     }*/
+    //计算如何打印 一元 五元 二元 拼凑的20的方法结束
 
-//输出100以内不带3的倍数和不包含3的和开始
-/*
-var sum = 0;
-for (var j = 0; j <= 100; j++) {
-    if ((j % 3 == 0) || (parseInt(j / 10) == 3) || (parseInt(j % 10) == 3)) {
-        continue;
-    }
-    sum = sum +j;
-}
-console.log(sum);
-var htmlStr = '';
-*/
-//输出100以内不带3的倍数和不包含3的和结束
+    //九九乘法口诀表开始
+    /*        for (var i = 1; i <= 9; i++) {
+     for (var j = 1; j <= i; j++) {
+     document.write(i + '*' + j + '=' + i * j + "&nbsp;");
+     }
+     document.write("<br/>");
+     }*/
 
-//100阶乘开始
-/* var a=100;
- for(var i=1;i<a;i++){
+    //九九乘法口诀表开始
+    /*        for (var i = 0; i<=10; i++) {
+     if (i = 5) {
+     break;
+     }
+     console.log(i);
+     }*/
+    //九九乘法口诀表结束
+
+    //遍历数组开始
+    /*
+     var arr = [14, 52, 67, 145, 60, 250, 529, 4, 80];
+     for (var i = 0; i < arr.length; i++) {
+     if (arr[i] < 100) {
+     console.log(arr[i]);
+     break;
+     }
+     }
+     */
+    //遍历数组结束
+
+    //输出100以内不带3的倍数和不包含3的和开始
+    /*
+     var sum = 0;
+     for (var j = 0; j <= 100; j++) {
+     if ((j % 3 == 0) || (parseInt(j / 10) == 3) || (parseInt(j % 10) == 3)) {
+     continue;
+     }
+     sum = sum +j;
+     }
+     console.log(sum);
+     var htmlStr = '';
+     */
+    //输出100以内不带3的倍数和不包含3的和结束
+
+    //100阶乘开始
+    /* var a=100;
+     for(var i=1;i<a;i++){
      a = a*i;
- }
- document.write(a);
-*/
-//100阶乘结束
+     }
+     document.write(a);
+     */
+    //100阶乘结束
 
 
-//输出闰年开始
-/*        for( var year = 1950; year <= 2050; year++) {
-            if ((((year % 4) == 0) && ((year % 100) != 0) || (year % 400 == 0))){
-                console.log(year);
-            }
-        }*/
-//输出闰年结束
+    //输出闰年开始
+    /*        for( var year = 1950; year <= 2050; year++) {
+     if ((((year % 4) == 0) && ((year % 100) != 0) || (year % 400 == 0))){
+     console.log(year);
+     }
+     }*/
+    //输出闰年结束
 
-//表格布局开始
-/*        var htmlStr = "<table class='table table-bordered table-hove'>"
-        for (var i = 1; i <= 9; i++) {
-             htmlStr += '<tr style="background-color: #86ff94; text-align: center">'
-            for (var j = 1; j <= i; j++) {
-                htmlStr +=('<td>' + j + "x" + i + "=" + (i * j) + "</td>");
-            }
-            htmlStr += '</tr>'
-        }
-        htmlStr += '</table>';
-        document.write(htmlStr);*/
-//表格布局结束
+    //表格布局开始
+    /*        var htmlStr = "<table class='table table-bordered table-hove'>"
+     for (var i = 1; i <= 9; i++) {
+     htmlStr += '<tr style="background-color: #86ff94; text-align: center">'
+     for (var j = 1; j <= i; j++) {
+     htmlStr +=('<td>' + j + "x" + i + "=" + (i * j) + "</td>");
+     }
+     htmlStr += '</tr>'
+     }
+     htmlStr += '</table>';
+     document.write(htmlStr);*/
+    //表格布局结束
 
-//函数作用域开始
+    //函数作用域开始
     //普通判断开始
-/*    function getSun(n, m) {
-        var sum = 0;
-        if (n >= m) {
-            for (var i = m; i<= n; i++) {
-                sum += i;
-            }
-        }
-        else{
-            for (var i = n; i<= m; i++) {
-                sum += i;
-            }
-        }
-        return sum;
-    }
-    alert(getSun(1, 4));*/
-//    普通判断结束
+    /*    function getSun(n, m) {
+     var sum = 0;
+     if (n >= m) {
+     for (var i = m; i<= n; i++) {
+     sum += i;
+     }
+     }
+     else{
+     for (var i = n; i<= m; i++) {
+     sum += i;
+     }
+     }
+     return sum;
+     }
+     alert(getSun(1, 4));*/
+    //    普通判断结束
 
 
-//    节俭判断开始
-/*    function getSun(n, m) {
-        var sum = 0;
-        if (n > m) {
-            var temp = m;
-            m = n;
-            n = temp;
-        }
-        for (var i = n; i<= m; i++) {
-            sum += i;
-        }
-        return sum;
-    }
-    console.log(getSun(1, 1));*/
-//    节俭判断结束
+    //    节俭判断开始
+    /*    function getSun(n, m) {
+     var sum = 0;
+     if (n > m) {
+     var temp = m;
+     m = n;
+     n = temp;
+     }
+     for (var i = n; i<= m; i++) {
+     sum += i;
+     }
+     return sum;
+     }
+     console.log(getSun(1, 1));*/
+    //    节俭判断结束
 
-//函数作用域结束
-
-
-//    计算圆的面积函数开始
-/*    function getCircleArea(r) {
-        return Math.PI*Math.pow(r, 2);
-    }
-    console.log(getCircleArea(2))*/
-//    计算圆的面积函数结束
-
-//    计算长方形面积开始
-/*    function getRectArea(width, heighgt) {
-        return width*heighgt;
-    }
-    console.log(getRectArea(100, 100))*/
-//    计算长方形面积结束
+    //函数作用域结束
 
 
+    //    计算圆的面积函数开始
+    /*    function getCircleArea(r) {
+     return Math.PI*Math.pow(r, 2);
+     }
+     console.log(getCircleArea(2))*/
+    //    计算圆的面积函数结束
 
-/*    var information = function (name, age, home, sex, bobys, skill) {
-        this.name = name,
-        this.age = age,
-        this.home = home,
-        this.sex = sex,
-        this.bobys = bobys,
-        this.skill = skill
-        }*/
-//        键         值
+    //    计算长方形面积开始
+    /*    function getRectArea(width, heighgt) {
+     return width*heighgt;
+     }
+     console.log(getRectArea(100, 100))*/
+    //    计算长方形面积结束
+
+
+    /*    var information = function (name, age, home, sex, bobys, skill) {
+     this.name = name,
+     this.age = age,
+     this.home = home,
+     this.sex = sex,
+     this.bobys = bobys,
+     this.skill = skill
+     }*/
+    //        键         值
 
 
     //数据类型开始
-/*    var zhege = {
-        name: '李哲',
-        age: 20,
-        home: '西安',
-        canCook: false,
-        babys: [
-            {
-                name: '李1',
-                sex: '女',
-                age: 1
-            },
-            {
-                name: '李2',
-                sex: '男',
-                age: 4
-            }
-        ],
-        sex: '男',
-        skills: ['html', 'css', 'js', 'ps'],
-        say: function (msg) {
-        },
-        eat: function (foods) {
-            for(var i = 0; i < foods.length; i++) {
-                alert('我吃了' + foods[i]);
-            }
-        }
-    }
-    console.log(zhege.age);
-    console.log(zhege.home);
-    console.log(zhege.skills);
-    zhege.say('大家好');
-    zhege.eat(['鸡腿', '可乐']);
-    zhege.eat(['鸭腿', '雪碧']);*/
+    /*    var zhege = {
+     name: '李哲',
+     age: 20,
+     home: '西安',
+     canCook: false,
+     babys: [
+     {
+     name: '李1',
+     sex: '女',
+     age: 1
+     },
+     {
+     name: '李2',
+     sex: '男',
+     age: 4
+     }
+     ],
+     sex: '男',
+     skills: ['html', 'css', 'js', 'ps'],
+     say: function (msg) {
+     },
+     eat: function (foods) {
+     for(var i = 0; i < foods.length; i++) {
+     alert('我吃了' + foods[i]);
+     }
+     }
+     }
+     console.log(zhege.age);
+     console.log(zhege.home);
+     console.log(zhege.skills);
+     zhege.say('大家好');
+     zhege.eat(['鸡腿', '可乐']);
+     zhege.eat(['鸭腿', '雪碧']);*/
     //数据类型结束
 
 
     //是否含有子字符串的方法开始
-/*    function find(str, searchStr) {
-        return str.indexOf(searchStr) != -1;
-    }
-    var resultB = find('一张网页，要经历怎样的过程才能抵达用户面前?', '用户');
-    console.log(resultB);
-    var resultA = find('一张网页，要经历怎样的过程才能抵达用户面前?', '前端');
-    console.log(resultA);*/
+    /*    function find(str, searchStr) {
+     return str.indexOf(searchStr) != -1;
+     }
+     var resultB = find('一张网页，要经历怎样的过程才能抵达用户面前?', '用户');
+     console.log(resultB);
+     var resultA = find('一张网页，要经历怎样的过程才能抵达用户面前?', '前端');
+     console.log(resultA);*/
     //是否含有子字符串的方法结束
 
     //统计字符出现次数的函数开始
-/*    var str = '我今天咋淘宝网上淘了一本书，我真的喜欢上淘宝，基本每天都在上淘宝'
-    function getWordCount(str, findStr) {
-        var count = 0;
-        var index = str.indexOf(findStr);
+    /*    var str = '我今天咋淘宝网上淘了一本书，我真的喜欢上淘宝，基本每天都在上淘宝'
+     function getWordCount(str, findStr) {
+     var count = 0;
+     var index = str.indexOf(findStr);
 
-        while(index != -1) {
-            count++;
-            index = str.indexOf(findStr, index + 1);
-        }
+     while(index != -1) {
+     count++;
+     index = str.indexOf(findStr, index + 1);
+     }
 
-        return count;
-    }
+     return count;
+     }
 
-    var str = '我今天在淘宝网淘了一本书，我真的很喜欢上淘宝，基本每天都上淘宝';
-    getWordCount(str, '淘宝');//3
-    getWordCount(str, '淘');//4
-    getWordCount(str, '天气');//0*/
+     var str = '我今天在淘宝网淘了一本书，我真的很喜欢上淘宝，基本每天都上淘宝';
+     getWordCount(str, '淘宝');//3
+     getWordCount(str, '淘');//4
+     getWordCount(str, '天气');//0*/
     //统计字符出现次数的函数结束
 
-/*    var num = 0;
-    while (num <= 500) {
-        num++;
-        if (num == 200) {
-            continue;
-        }
-        console.log(num);
-    }*/
+    /*    var num = 0;
+     while (num <= 500) {
+     num++;
+     if (num == 200) {
+     continue;
+     }
+     console.log(num);
+     }*/
 
     //截取身份证生日
-/*    var str = '110226198501272116';
-    console.log(str.substring(6, 14));*/
+    /*    var str = '110226198501272116';
+     console.log(str.substring(6, 14));*/
 
     //返回大写不改变原来的字符串
-/*    var str = 'hello';
-    var upperCase = str.toUpperCase();
-    var lowerCase = str.toLowerCase();
-    console.log(upperCase);//HELLO
-    console.log(lowerCase);//hello*/
+    /*    var str = 'hello';
+     var upperCase = str.toUpperCase();
+     var lowerCase = str.toLowerCase();
+     console.log(upperCase);//HELLO
+     console.log(lowerCase);//hello*/
 
     //返回数组 不改变原来的字符串
-/*    var str = 'How are you doing today';
-    var arr = str.split(' ');
-    console.log(arr);//["How", "are", "you", "doing", "today"]*/
+    /*    var str = 'How are you doing today';
+     var arr = str.split(' ');
+     console.log(arr);//["How", "are", "you", "doing", "today"]*/
 
     //拆分字符串变数组
-/*
-    var str = '122270672.1487387617102624128897.1487387617.1492044533.1492051230.129';
-    var arr = str.split('.');
-    var str2 = arr[1][0];
-    console.log(arr);//["122270672", "1487387617102624128897", "1487387617", "1492044533", "1492051230", "129"]
-    console.log(str2);//1
-    var arr2 = str.split('.', 2);
-    console.log(arr2);//["122270672", "1487387617102624128897"]
-    var str3 = str.replace('1222', '3333');//
-    console.log(str3);//333370672.1487387617102624128897.1487387617.1492044533.1492051230.129
-    var str4 = str.concat(str2, str3);
-    console.log(str4);//333370672.1487387617102624128897.1487387617.1492044533.1492051230.129lianxi.html?_ijt=ue6lngg0jhrqqo0f5k0eugk651:459 122270672.1487387617102624128897.1487387617.1492044533.1492051230.1291333370672.1487387617102624128897.1487387617.1492044533.1492051230.129
-*/
+    /*
+     var str = '122270672.1487387617102624128897.1487387617.1492044533.1492051230.129';
+     var arr = str.split('.');
+     var str2 = arr[1][0];
+     console.log(arr);//["122270672", "1487387617102624128897", "1487387617", "1492044533", "1492051230", "129"]
+     console.log(str2);//1
+     var arr2 = str.split('.', 2);
+     console.log(arr2);//["122270672", "1487387617102624128897"]
+     var str3 = str.replace('1222', '3333');//
+     console.log(str3);//333370672.1487387617102624128897.1487387617.1492044533.1492051230.129
+     var str4 = str.concat(str2, str3);
+     console.log(str4);//333370672.1487387617102624128897.1487387617.1492044533.1492051230.129lianxi.html?_ijt=ue6lngg0jhrqqo0f5k0eugk651:459 122270672.1487387617102624128897.1487387617.1492044533.1492051230.1291333370672.1487387617102624128897.1487387617.1492044533.1492051230.129
+     */
 
-//    重复字符串练习
-/*    function backStr(str, num) {
-        var result = '';
-        if (num > 0) {
-            for (var i = 0; i < num; i++) {
-                result += str;
-            }
-        }
-        return result;
-    }
-    console.log(backStr('*', 3));//!***
-    console.log(backStr('abc', 3));//abcabcabc
-    console.log(backStr('abc', 4));//abcabcabcabc
-    console.log(backStr('abc', 1));//abc
-    console.log(backStr('*', 8));//!********
-    console.log(backStr('abc', -2));//*/
+    //    重复字符串练习
+    /*    function backStr(str, num) {
+     var result = '';
+     if (num > 0) {
+     for (var i = 0; i < num; i++) {
+     result += str;
+     }
+     }
+     return result;
+     }
+     console.log(backStr('*', 3));//!***
+     console.log(backStr('abc', 3));//abcabcabc
+     console.log(backStr('abc', 4));//abcabcabcabc
+     console.log(backStr('abc', 1));//abc
+     console.log(backStr('*', 8));//!********
+     console.log(backStr('abc', -2));//*/
 
     //数组
 
     //棋盘的二维数组布局
-/*    var a = ['张三', '李四', '王五'];
-    var qipan = [
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    ];
-    console.log(qipan[2][3]);*/
+    /*    var a = ['张三', '李四', '王五'];
+     var qipan = [
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+     ];
+     console.log(qipan[2][3]);*/
 
     //数组的操作方法
-/*    var arr = ['apple', 'orange'];
-    arr.push('banana');//返回数组长度
-    var fruit = arr.pop;
-    console.log(fruit);//banana
-    var shift = */
+    /*    var arr = ['apple', 'orange'];
+     arr.push('banana');//返回数组长度
+     var fruit = arr.pop;
+     console.log(fruit);//banana
+     var shift = */
 
-/*    var fruitStr = 'Apple&Pear&Banana&Orange&Mongo';
-    var result = fruitStr.split('&');
-    console.log(result.join('-'));*/
+    /*    var fruitStr = 'Apple&Pear&Banana&Orange&Mongo';
+     var result = fruitStr.split('&');
+     console.log(result.join('-'));*/
 
-/*    var arr = ['Apple', 'Banana', 'Orange', 'pear'];
-    var newArr = arr.slice(1, 2);
-    console.log(newArr);
-    console.log(arr);*/
+    /*    var arr = ['Apple', 'Banana', 'Orange', 'pear'];
+     var newArr = arr.slice(1, 2);
+     console.log(newArr);
+     console.log(arr);*/
 
-/*    var str = '我是一个大好人'
-    var arr = str.split('');
-    var arr1 = arr.reverse();
-    console.log(arr1.join(''));*/
+    /*    var str = '我是一个大好人'
+     var arr = str.split('');
+     var arr1 = arr.reverse();
+     console.log(arr1.join(''));*/
 
     //数组获取数组中正数的方法
-/*    var getBigger0 = [-1,-2, -333, 0, 1, 2, 3, 4];
-    function getBig0(arr) {
-        var resultArr = []
-        for (var i = 0; i<arr.length; i++){
-            if (arr[i] > 0) {
-                resultArr.push(arr[i]);
-            }
-        }
-        return resultArr;
-    }
-    console.log(getBig0(getBigger0));*/
-/*    var getBigger0 = [-1,-2, -333, 0, 1, 2, 3, 4];
-    function getBiggest(arr) {
-        for (var i = 0; i<arr.length; i++) {
-            if (arr[i] >= arr[i+1]) {
-                arr.splice(0, i+1);
-            }
-            else{
-                arr.splice(0, i)
-            }
-        }
-        return arr[0];
-    }
-    console.log(getBiggest(getBigger0));*/
-/*    var arr1 = [1, 2, 3, 4];
-    var arr2 = ['a', 'b', 'c', 1];
-    function contact(arr1, arr2) {
-        var result = [];
-            for (var i = 0; i < arr1.length; i++) {
-                result.push(arr1[i]);
-            }
-            for (var i = 0; i < arr2.length; i++) {
-                result.push(arr2[i]);
-            }
-        return result;
-    }
-    console.log(contact(arr1, arr2));*/
+    /*    var getBigger0 = [-1,-2, -333, 0, 1, 2, 3, 4];
+     function getBig0(arr) {
+     var resultArr = []
+     for (var i = 0; i<arr.length; i++){
+     if (arr[i] > 0) {
+     resultArr.push(arr[i]);
+     }
+     }
+     return resultArr;
+     }
+     console.log(getBig0(getBigger0));*/
+    /*    var getBigger0 = [-1,-2, -333, 0, 1, 2, 3, 4];
+     function getBiggest(arr) {
+     for (var i = 0; i<arr.length; i++) {
+     if (arr[i] >= arr[i+1]) {
+     arr.splice(0, i+1);
+     }
+     else{
+     arr.splice(0, i)
+     }
+     }
+     return arr[0];
+     }
+     console.log(getBiggest(getBigger0));*/
+    /*    var arr1 = [1, 2, 3, 4];
+     var arr2 = ['a', 'b', 'c', 1];
+     function contact(arr1, arr2) {
+     var result = [];
+     for (var i = 0; i < arr1.length; i++) {
+     result.push(arr1[i]);
+     }
+     for (var i = 0; i < arr2.length; i++) {
+     result.push(arr2[i]);
+     }
+     return result;
+     }
+     console.log(contact(arr1, arr2));*/
 
-/*    var arr1 = [1, 2, 3, 4];
-    var arr2 = ['a', 'b', 'c', 1];
-    function concat1(arr1, arr2) {
-        return(arr1.concat(arr2));
-    }
-    console.log(concat1(arr1, arr2));
-    console.log(arr1);
-    console.log(arr2);*/
+    /*    var arr1 = [1, 2, 3, 4];
+     var arr2 = ['a', 'b', 'c', 1];
+     function concat1(arr1, arr2) {
+     return(arr1.concat(arr2));
+     }
+     console.log(concat1(arr1, arr2));
+     console.log(arr1);
+     console.log(arr2);*/
 
-/*    var apple = [5]
-    function add() {
-        console.log(apple);
-        var apple = [];
-    }
-    add();*/
+    /*    var apple = [5]
+     function add() {
+     console.log(apple);
+     var apple = [];
+     }
+     add();*/
 
 
 
-    //数组去重的函数
-/*    var removeRepeat =[1, 2, 4, 4, 3, 3, 3, 52, 6, 21, 1];
-    function removeRepeatArr(arr) {
-        var result = [];
-        for (var i = 0; i < arr.length; i++) {
-            for (var j = i+1; j < arr.length; j++) {
-                if (arr[i] == arr[j])
-                result.push(arr[j]);
-            }
-        }
-        for (var k = 0; k < arr.length; k++) {
-            for (var j = 0; j < result.length; j++) {
-                if (arr[k] == result[j]){
-                    arr.splice(k-1,1);
-                }
-            }
-        }
-        return arr;
-    }
-    console.log(removeRepeatArr(removeRepeat));*/
+    //数组去重的函数1
+    /*        var removeRepeat =[1, 2, 4, 4, 3, 3, 3, 52, 6, 21, 1];
+     function removeRepeatArr(arr) {
+     var result = [];
+     for (var i = 0; i < arr.length; i++) {
+     for (var j = i+1; j < arr.length; j++) {
+     if (arr[i] == arr[j])
+     result.push(arr[j]);
+     }
+     }
+     for (var k = 0; k < arr.length; k++) {
+     for (var j = 0; j < result.length; j++) {
+     if (arr[k] == result[j]){
+     arr.splice(k-1,1);
+     }
+     }
+     }
+     return arr;
+     }
+     console.log(removeRepeatArr(removeRepeat));*/
+
+    //数组去重的函数2
+    /*    var arr =[1, 2, 4, 4, 3, 3, 3, 52, 6, 21, 1];
+     function removeRepeat(arr)
+     {
+     var n = {},r=[]; //n为hash表，r为临时数组
+     for(var i = 0; i < arr.length; i++) //遍历当前数组
+     {
+     if (!n[arr[i]]) //如果hash表中没有当前项
+     {
+     n[arr[i]] = true; //存入hash表
+     r.push(arr[i]); //把当前数组的当前项push到临时数组里面
+     }
+     }
+     console.log(r);
+     }
+     removeRepeat(arr);*/
 
 
     //计算数组中的字符出现的个数
-/*    var counts = [1, 2, 4, 4, 3, 4, 3];
-    function count(arr, item) {
-        var items = 0;
-        for (var i = 0; i< arr.length; i++) {
-            if (arr[i] == item) {
-                items++;
-            }
-        }
-        return items;
-    }
-    console.log(count(counts, 4));*/
+    /*    var counts = [1, 2, 4, 4, 3, 4, 3];
+     function count(arr, item) {
+     var items = 0;
+     for (var i = 0; i< arr.length; i++) {
+     if (arr[i] == item) {
+     items++;
+     }
+     }
+     return items;
+     }
+     console.log(count(counts, 4));*/
 
 
 
     //计算数组中所有元素的总和
-/*    var sum = [1, 2, 3, 4, 6, 7];
-    function arraySum(arr) {
-        var result = 0;
-        for (var i = 0; i< arr.length; i++) {
-            result = result + arr[i];
-        }
-        return result;
-    }
-    console.log(arraySum(sum));*/
+    /*    var sum = [1, 2, 3, 4, 6, 7];
+     function arraySum(arr) {
+     var result = 0;
+     for (var i = 0; i< arr.length; i++) {
+     result = result + arr[i];
+     }
+     return result;
+     }
+     console.log(arraySum(sum));*/
 
 
 
     //求数组最小值得函数
-/*    var array = [1, -4, -5, 5, 0, 2, 3];
-    function minArray(arr) {
-        var sum = arr[0];
-        for (var i = 0; i < arr.length; i++) {
-            if (sum > arr[i]) {
-                sum = arr[i];
-            }
-        }
-        return sum;
-    }
-    console.log(minArray(array));*/
+    /*    var array = [1, -4, -5, 5, 0, 2, 3];
+     function minArray(arr) {
+     var sum = arr[0];
+     for (var i = 0; i < arr.length; i++) {
+     if (sum > arr[i]) {
+     sum = arr[i];
+     }
+     }
+     return sum;
+     }
+     console.log(minArray(array));*/
 
 
 
     //首字母大写的函数
-/*    function firstLetterToUpperCase(str) {
-        if (isNaN(str)) {
-            var str1 = '';
-            str1 = str1 +str.substring(0,1).toUpperCase() + str.substring(1);
-            console.log(str1);
-        }
-        else{
-            console.log(str);
-        }
-    }
-    firstLetterToUpperCase('sum');//输出sum
-    firstLetterToUpperCase('hello'); // 输出 'Hello'
-    firstLetterToUpperCase('World'); // 输出 'World'
-    firstLetterToUpperCase(344);//输出344*/
+    /*        function firstLetterToUpperCase(str) {
+     var str2 = str.toString();
+     var result = str;
+     if (isNaN(str2[0])) {
+     var str1 = '';
+     str1 = str1 +str.substring(0,1).toUpperCase() + str.substring(1);
+     result = str1;
+     }
+     else{
+     console.log(result);
+     }
+     }
+     firstLetterToUpperCase('sum');//输出sum
+     firstLetterToUpperCase('hello'); // 输出 'Hello'
+     firstLetterToUpperCase('World'); // 输出 'World'
+     firstLetterToUpperCase(344);//输出344*/
 
 
 
     //提取字符串里面的数字然后求和
-/*    var str = 'We have 30 apples will be handed out to 10 students who need it, containing 5 foreigners'
-    function inStrShuZiQiuHe(str) {
-        var arr = str.split(' ');
-        var arr1 = [];
-        for (var i = 0; i < arr.length; i++) {
-            if (!isNaN(parseInt(arr[i]))) {
-                arr1.push(arr[i]);
-            }
-        }
-        var sum = 0;
-        for (var j = 0; j< arr1.length; j++) {
-            sum = parseInt(arr1[j]) + sum;
-        }
-        console.log(sum);
-    }
-    inStrShuZiQiuHe(str);*/
+    /*    var str = 'We have 30 apples will be handed out to 10 students who need it, containing 5 foreigners'
+     function inStrShuZiQiuHe(str) {
+     var arr = str.split(' ');
+     var arr1 = [];
+     for (var i = 0; i < arr.length; i++) {
+     if (!isNaN(parseInt(arr[i]))) {
+     arr1.push(arr[i]);
+     }
+     }
+     var sum = 0;
+     for (var j = 0; j< arr1.length; j++) {
+     sum = parseInt(arr1[j]) + sum;
+     }
+     console.log(sum);
+     }
+     inStrShuZiQiuHe(str);*/
 
 
 
     //删除字符串中所有的数字
-/*    function removeNum(str) {
-        var str1 = '';
-        for (var i = 0; i < str.length; i++) {
-            if (isNaN(parseInt(str.charAt(i)))) {
-                str1 = str1 + str.charAt(i);
-            }
-        }
-        console.log(str1);
-    }
-    removeNum('ssssssss344343sdfsdfsfsdf');*/
+    /*    function removeNum(str) {
+     var str1 = '';
+     for (var i = 0; i < str.length; i++) {
+     if (isNaN(parseInt(str.charAt(i)))) {
+     str1 = str1 + str.charAt(i);
+     }
+     }
+     console.log(str1);
+     }
+     removeNum('ssssssss344343sdfsdfsfsdf');*/
 
 
 
     //将字符串中_后面的小并且删除写字母变大写，并且删除_
-/*    function toCamelStyle(str) {
-        var items = str.split('_');
-        var items1 = '';
-        var items2 = '';
-        if (items[0] == '') {
-            items.shift();
-            items.unshift('_');
-            for (var i = 0; i < items.length; i++) {
-                items1 = items1 + items[i][0].toUpperCase() + items[i].substr(1);
-            }
-            items2 = items1[1].toLowerCase();
-            var sum = items1.split('');
-            sum.shift();
-            sum.unshift(items2);
-            sum.unshift('_');
-            var result = sum.join('');
-        }
-        else{
-            for (var i = 0; i < items.length; i++) {
-                items1 = items1 + items[i][0].toUpperCase() + items[i].substr(1);
-            }
-            items2 = items1[0].toLowerCase();
-            var sum = items1.split('');
-            sum.shift();
-            sum.unshift(items2);
-            var result = sum.join('');
-        }
-        console.log(result);
-    }
-    toCamelStyle('a_sdfsaf_sdfasdf');
-    toCamelStyle('abc_bcd');  // 输出 'abcBcd'
-    toCamelStyle('a_3_c_d_ef');  // 输出 'a3CDEf'
-    toCamelStyle('_a_b_c_d_ef');  // 输出 '_aBCDEf'*/
+    /*    function toCamelStyle(str) {
+     var items = str.split('_');
+     var items1 = '';
+     var items2 = '';
+     if (items[0] == '') {
+     items.shift();
+     items.unshift('_');
+     for (var i = 0; i < items.length; i++) {
+     items1 = items1 + items[i][0].toUpperCase() + items[i].substr(1);
+     }
+     items2 = items1[1].toLowerCase();
+     var sum = items1.split('');
+     sum.shift();
+     sum.unshift(items2);
+     sum.unshift('_');
+     var result = sum.join('');
+     }
+     else{
+     for (var i = 0; i < items.length; i++) {
+     items1 = items1 + items[i][0].toUpperCase() + items[i].substr(1);
+     }
+     items2 = items1[0].toLowerCase();
+     var sum = items1.split('');
+     sum.shift();
+     sum.unshift(items2);
+     var result = sum.join('');
+     }
+     console.log(result);
+     }
+     toCamelStyle('a_sdfsaf_sdfasdf');
+     toCamelStyle('abc_bcd');  // 输出 'abcBcd'
+     toCamelStyle('a_3_c_d_ef');  // 输出 'a3CDEf'
+     toCamelStyle('_a_b_c_d_ef');  // 输出 '_aBCDEf'*/
 
 
 
     //反转字符串
-/*    function reverseStr(str) {
-        var arr = str.split("");
-        var arr2 = [];
-        for (var i =0; i < arr.length; i++) {
-            arr2.unshift(arr[i]);
+    /*    function reverseStr(str) {
+     var arr = str.split("");
+     var arr2 = [];
+     for (var i =0; i < arr.length; i++) {
+     arr2.unshift(arr[i]);
+     }
+     console.log(arr2);
+     }
+     reverseStr('asdf');*/
+
+
+
+    //幸运数字是只有4和7组成的正整数，从小到大排列，输入任意位置，找出该位置上的幸运数字？
+    /*    function goodLuckNum(num) {
+     if (num > 224) {
+     alert('请输入1-224之间的整数');
+     }
+     var item1 = 10000000;
+     var arr = [];
+     for (var i = 0; i < item1; i++) {
+     var item2 = i.toString();
+     arr.push(item2);
+     }
+     var arr1 = [];
+     for (var k = 0; k < arr.length; k++) {
+     if (arr[k].length == 1 && (arr[k] == 4 || arr[k] == 7)) {
+     arr1.push(arr[k]);
+     }
+     if (arr[k].length == 2 && ((arr[k][0] == 4 || arr[k][0] == 7) && (arr[k][1] == 4 || arr[k][1] == 7))) {
+     arr1.push(arr[k]);
+     }
+     if (arr[k].length == 3 && ((arr[k][0] == 4 || arr[k][0] == 7) && (arr[k][1] == 4 || arr[k][1] == 7) && (arr[k][2] == 4 || arr[k][2] == 7))) {
+     arr1.push(arr[k]);
+     }
+     if (arr[k].length == 4 && ((arr[k][0] == 4 || arr[k][0] == 7) && (arr[k][1] == 4 || arr[k][1] == 7) && (arr[k][2] == 4 || arr[k][2] == 7) && (arr[k][3] == 4 || arr[k][3] == 7))) {
+     arr1.push(arr[k]);
+     }
+     if (arr[k].length == 5 && ((arr[k][0] == 4 || arr[k][0] == 7) && (arr[k][1] == 4 || arr[k][1] == 7) && (arr[k][2] == 4 || arr[k][2] == 7) && (arr[k][3] == 4 || arr[k][3] == 7) && (arr[k][4] == 4 || arr[k][4] == 7))) {
+     arr1.push(arr[k]);
+     }
+     if (arr[k].length == 6 && ((arr[k][0] == 4 || arr[k][0] == 7) && (arr[k][1] == 4 || arr[k][1] == 7) && (arr[k][2] == 4 || arr[k][2] == 7) && (arr[k][3] == 4 || arr[k][3] == 7) && (arr[k][4] == 4 || arr[k][4] == 7) && (arr[k][5] == 4 || arr[k][5] == 7))) {
+     arr1.push(arr[k]);
+     }
+     if (arr[k].length == 7 && ((arr[k][0] == 4 || arr[k][0] == 7) && (arr[k][1] == 4 || arr[k][1] == 7) && (arr[k][2] == 4 || arr[k][2] == 7) && (arr[k][3] == 4 || arr[k][3] == 7) && (arr[k][4] == 4 || arr[k][4] == 7) && (arr[k][5] == 4 || arr[k][5] == 7) && (arr[k][6] == 4 || arr[k][6] == 7))) {
+     arr1.push(arr[k]);
+     }
+     }
+     console.log(arr1[num]);
+     }
+     goodLuckNum(224);*/
+
+    //幸运数字判断
+/*    function getLuckNumber(number) {
+        var arr = [];
+        var num = 10000;
+        var num1 = num.toString();
+        for (var i = 0; i < num; i++) {
+            arr.push(i.toString(2));//把数字转换二进制
         }
-        console.log(arr2);
+        var arr1 = [];
+        var str = '';
+        for (var j = 2; j < arr.length; j++) {
+            str = arr[j].split('').reverse().join('');//数组颠倒顺序然后添加arr1
+            arr1.push(str);
+            arr1.push(arr[j]);
+        }
+        var s = '0';
+        var t = '';
+        for (var k = 0; k < num1.length; k++) {
+            t = t + s;
+            arr1.push(t);
+        }
+        var arr2 = [];
+        for (var n = 0; n < arr1.length; n++) {
+            var ss1 =arr1[n].toString();
+            var ss3 = ss1.replace(/0/g, '4');
+            arr2.push(ss3);
+        }
+        var arr4 = [];
+        for (var nu = 0; nu < arr2.length; nu++) {
+            var ss2 =arr2[nu].toString();
+            var ss4 = ss2.replace(/1/g, '7');
+            arr4.push(ss4);
+        }
+        var nn = {}, r = []; //n为hash表，r为临时数组
+        for (var kk = 0; kk < arr4.length; kk++) {//遍历当前数组
+            if (!nn[arr4[kk]]) {//如果hash表中没有当前项
+                nn[arr4[kk]] = true; //存入hash表
+                r.push(arr4[kk]); //把当前数组的当前项push到临时数组里面
+            }
+        }
+        var arr5 = [];
+        for (var mm = 0; mm < r.length; mm++) {
+            arr5.push(Number(r[mm]));
+        }
+        arr5.push(7);
+        function sortNumber(a,b) {
+            return a - b
+        }
+        arr5.sort(sortNumber);
+        console.log(arr5[number]);
     }
-    reverseStr('asdf');*/
+    getLuckNumber(2);*/
+
+    //获取幸运数字
+    function getLuckNum(n) {
+        var length = '';
+        for (var i = 2; ; i++) {
+            if (n <= Math.pow(2, i)-2) {
+                length = i - 1;
+                break;
+            }
+        }
+        for (var j = 0; j < Math(2, length); j++) {
+
+        }
+//        console.log(num1);
+    }
+    getLuckNum(5);
 </script>
 </body>
 </html>
