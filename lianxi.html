@@ -572,37 +572,40 @@
 
 
     //数组去重的函数1
-    /*        var removeRepeat =[1, 2, 4, 4, 3, 3, 3, 52, 6, 21, 1];
-     function removeRepeatArr(arr) {
-     var result = [];
-     for (var i = 0; i < arr.length; i++) {
-     for (var j = i+1; j < arr.length; j++) {
-     if (arr[i] == arr[j])
-     result.push(arr[j]);
-     }
-     }
-     for (var k = 0; k < arr.length; k++) {
-     for (var j = 0; j < result.length; j++) {
-     if (arr[k] == result[j]){
-     arr.splice(k-1,1);
-     }
-     }
-     }
-     return arr;
-     }
-     console.log(removeRepeatArr(removeRepeat));*/
+/*    var removeRepeat = [1, 2, 4, 4, 3, 3, 3, 3, 3, 52, 6, 21, 1];
+    function removeRepeatArr(arr) {
+        var result = [];
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]){
+                    result.push(arr[j]);
+                    break;
+                }
+            }
+        }
+        for (var k = 0; k < result.length; k++) {
+            for (var j = 0; j < arr.length; j++) {
+                if (result[k] == arr[j]) {
+                    arr.splice(j, 1);
+                    break;
+                }
+            }
+        }
+        return arr;
+    }
+    console.log(removeRepeatArr(removeRepeat));*/
 
     //数组去重的函数2
     /*    var arr =[1, 2, 4, 4, 3, 3, 3, 52, 6, 21, 1];
      function removeRepeat(arr)
      {
-     var n = {},r=[]; //n为hash表，r为临时数组
-     for(var i = 0; i < arr.length; i++) //遍历当前数组
+     var n = {},r=[];                      //n为hash表，r为临时数组
+     for(var i = 0; i < arr.length; i++)   //遍历当前数组
      {
-     if (!n[arr[i]]) //如果hash表中没有当前项
+     if (!n[arr[i]])                       //如果hash表中没有当前项
      {
-     n[arr[i]] = true; //存入hash表
-     r.push(arr[i]); //把当前数组的当前项push到临时数组里面
+     n[arr[i]] = true;                     //存入hash表
+     r.push(arr[i]);                       //把当前数组的当前项push到临时数组里面
      }
      }
      console.log(r);
@@ -654,23 +657,20 @@
 
 
     //首字母大写的函数
-    /*        function firstLetterToUpperCase(str) {
+    /*    function firstLetterToUpperCase(str) {
      var str2 = str.toString();
      var result = str;
      if (isNaN(str2[0])) {
      var str1 = '';
-     str1 = str1 +str.substring(0,1).toUpperCase() + str.substring(1);
+     str1 = str1 + str.substring(0, 1).toUpperCase() + str.substring(1);
      result = str1;
      }
-     else{
      console.log(result);
-     }
      }
      firstLetterToUpperCase('sum');//输出sum
      firstLetterToUpperCase('hello'); // 输出 'Hello'
      firstLetterToUpperCase('World'); // 输出 'World'
      firstLetterToUpperCase(344);//输出344*/
-
 
 
     //提取字符串里面的数字然后求和
@@ -706,15 +706,13 @@
      removeNum('ssssssss344343sdfsdfsfsdf');*/
 
 
-
     //将字符串中_后面的小并且删除写字母变大写，并且删除_
-    /*    function toCamelStyle(str) {
+    /*        function toCamelStyle(str) {
      var items = str.split('_');
      var items1 = '';
      var items2 = '';
      if (items[0] == '') {
      items.shift();
-     items.unshift('_');
      for (var i = 0; i < items.length; i++) {
      items1 = items1 + items[i][0].toUpperCase() + items[i].substr(1);
      }
@@ -745,7 +743,7 @@
 
 
     //反转字符串
-    /*    function reverseStr(str) {
+    /*        function reverseStr(str) {
      var arr = str.split("");
      var arr2 = [];
      for (var i =0; i < arr.length; i++) {
@@ -792,78 +790,112 @@
      arr1.push(arr[k]);
      }
      }
-     console.log(arr1[num]);
+     console.log(arr1[num-1]);
      }
      goodLuckNum(224);*/
 
     //幸运数字判断
-/*    function getLuckNumber(number) {
-        var arr = [];
-        var num = 10000;
-        var num1 = num.toString();
-        for (var i = 0; i < num; i++) {
-            arr.push(i.toString(2));//把数字转换二进制
-        }
-        var arr1 = [];
-        var str = '';
-        for (var j = 2; j < arr.length; j++) {
-            str = arr[j].split('').reverse().join('');//数组颠倒顺序然后添加arr1
-            arr1.push(str);
-            arr1.push(arr[j]);
-        }
-        var s = '0';
-        var t = '';
-        for (var k = 0; k < num1.length; k++) {
-            t = t + s;
-            arr1.push(t);
-        }
-        var arr2 = [];
-        for (var n = 0; n < arr1.length; n++) {
-            var ss1 =arr1[n].toString();
-            var ss3 = ss1.replace(/0/g, '4');
-            arr2.push(ss3);
-        }
-        var arr4 = [];
-        for (var nu = 0; nu < arr2.length; nu++) {
-            var ss2 =arr2[nu].toString();
-            var ss4 = ss2.replace(/1/g, '7');
-            arr4.push(ss4);
-        }
-        var nn = {}, r = []; //n为hash表，r为临时数组
-        for (var kk = 0; kk < arr4.length; kk++) {//遍历当前数组
-            if (!nn[arr4[kk]]) {//如果hash表中没有当前项
-                nn[arr4[kk]] = true; //存入hash表
-                r.push(arr4[kk]); //把当前数组的当前项push到临时数组里面
-            }
-        }
-        var arr5 = [];
-        for (var mm = 0; mm < r.length; mm++) {
-            arr5.push(Number(r[mm]));
-        }
-        arr5.push(7);
-        function sortNumber(a,b) {
-            return a - b
-        }
-        arr5.sort(sortNumber);
-        console.log(arr5[number]);
-    }
-    getLuckNumber(2);*/
+    /*    function getLuckNumber(number) {
+     var arr = [];
+     var num = 10000;
+     var num1 = num.toString();
+     for (var i = 0; i < num; i++) {
+     arr.push(i.toString(2));//把数字转换二进制
+     }
+     var arr1 = [];
+     var str = '';
+     for (var j = 2; j < arr.length; j++) {
+     str = arr[j].split('').reverse().join('');//数组颠倒顺序然后添加arr1
+     arr1.push(str);
+     arr1.push(arr[j]);
+     }
+     var s = '0';
+     var t = '';
+     for (var k = 0; k < num1.length; k++) {
+     t = t + s;
+     arr1.push(t);
+     }
+     var arr2 = [];
+     for (var n = 0; n < arr1.length; n++) {
+     var ss1 =arr1[n].toString();
+     var ss3 = ss1.replace(/0/g, '4');
+     arr2.push(ss3);
+     }
+     var arr4 = [];
+     for (var nu = 0; nu < arr2.length; nu++) {
+     var ss2 =arr2[nu].toString();
+     var ss4 = ss2.replace(/1/g, '7');
+     arr4.push(ss4);
+     }
+     var nn = {}, r = []; //n为hash表，r为临时数组
+     for (var kk = 0; kk < arr4.length; kk++) {//遍历当前数组
+     if (!nn[arr4[kk]]) {//如果hash表中没有当前项
+     nn[arr4[kk]] = true; //存入hash表
+     r.push(arr4[kk]); //把当前数组的当前项push到临时数组里面
+     }
+     }
+     var arr5 = [];
+     for (var mm = 0; mm < r.length; mm++) {
+     arr5.push(Number(r[mm]));
+     }
+     arr5.push(7);
+     function sortNumber(a,b) {
+     return a - b
+     }
+     arr5.sort(sortNumber);
+     console.log(arr5[number]);
+     }
+     getLuckNumber(2);*/
 
     //获取幸运数字
-    function getLuckNum(n) {
-        var length = '';
-        for (var i = 2; ; i++) {
-            if (n <= Math.pow(2, i)-2) {
-                length = i - 1;
-                break;
-            }
-        }
-        for (var j = 0; j < Math(2, length); j++) {
+    /*    function getLuckNum(n) {
+     var length = '';
+     for (var i = 2; ; i++) {
+     if (n <= Math.pow(2, i) - 2) {
+     length = i - 1;
+     break;
+     }
+     }
+     var arr1 = [];
+     for (var j = 0; j < Math.pow(2, Number(length)); j++) {
+     arr1.push(j.toString(2).replace(/1/g, '7').replace(/0/g, '4'));
+     arr1.push(j.toString(2).replace('1', '0').replace(/1/g, '7').replace(/0/g, '4'));
+     }
+     var nn = {}, r = []; //n为hash表，r为临时数组
+     for (var kk = 0; kk < arr1.length; kk++) {//遍历当前数组
+     if (!nn[arr1[kk]]) {//如果hash表中没有当前项
+     nn[arr1[kk]] = true; //存入hash表
+     r.push(arr1[kk]); //把当前数组的当前项push到临时数组里面
+     }
+     }
+     function sortNumber(a, b) {
+     return a - b;
+     }
+     r.sort(sortNumber);
+     console.log(r[n-1]);
+     }
+     getLuckNum(4);*/
 
-        }
-//        console.log(num1);
-    }
-    getLuckNum(5);
+
+    //获取幸运数字
+    /*    function getLuckNum(num) {
+     var str = (num-0).toString(2);
+     var length = str.length;
+     if (!str.indexOf('0')) {
+     length += 1;
+     }
+     var m = num - ((1 << (length - 1)) - 2);
+     var result = (m - 1).toString(2);
+     while (result.length < length - 1) {
+     result = '0' + result;
+     }
+     var str1 = result.replace(/0/g, '4');
+     var str2 = str1.replace(/1/g, '7');
+     console.log(str2);
+     }
+     getLuckNum(100);*/
+
+
 </script>
 </body>
 </html>
