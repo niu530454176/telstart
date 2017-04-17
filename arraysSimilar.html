@@ -1,71 +1,36 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style type="text/css">
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .main{
-            width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-            position: relative;
-            background: #f00;
-        }
-        .main .box1{
-            float: left;
-            width: 700px;
-            background: #f0f;
-        }
-        .main .box2{
-            float: left;
-            width: 300px;
-            background-color: #eee;
-            padding-bottom: 300000px;
-            margin-bottom: -300000px;
-            background: #0f0;
-        }
-    </style>
-</head>
-<body>
-    <div class="main">
-        <div class="box1">
-            我是盒子 <br>
-            我是盒子 <br>
-            我是盒子 <br>
-            我是盒子 <br>
-            我是盒子 <br>
-            我是盒子 <br>
-            我是盒子 <br>
-            我是盒子 <br>
-            我是盒子 <br>
-            我是盒子 <br>
-            我是盒子 <br>
-            我是盒子 <br>
+<script>
+    !(function(win, doc){
+        function setFontSize() {
+            var baseFontSize = 100;
+            var baseWidth = 320;
+            var clientWidth = document.documentElement.clientWidth || window.innerWidth;
+            var innerWidth = Math.max(Math.min(clientWidth, 480), 320);
 
-        </div>
-        <div class="box2"></div>
+            var rem = 100;
 
-    </div>
-    <div class="box2">
-        我是盒子 <br>
-        我是盒子 <br>
-        我是盒子 <br>
-        我是盒子 <br>
-        我是盒子 <br>
-        我是盒子 <br>
-        我是盒子 <br>
-        我是盒子 <br>
-        我是盒子 <br>
-        我是盒子 <br>
-        我是盒子 <br>
-        我是盒子 <br>
-    </div>
-</body>
-</html>
+            if (innerWidth > 362 && innerWidth <= 375) {
+                rem = Math.floor(innerWidth / baseWidth * baseFontSize * 0.9);
+            }
+
+            if (innerWidth > 375) {
+                rem = Math.floor(innerWidth / baseWidth * baseFontSize * 0.84);
+            }
+
+            window.__baseREM = rem;
+            document.querySelector('html').style.fontSize = rem + 'px';
+        }
+        var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';
+        var timer = null;
+        win.addEventListener(evt, function () {
+            clearTimeout(timer);
+            timer = setTimeout(setFontSize, 300);
+        }, false);
+        win.addEventListener("pageshow", function(e) {
+            if (e.persisted) {
+                clearTimeout(timer);
+                timer = setTimeout(setFontSize, 300);
+            }
+        }, false);
+        setFontSize();
+    }(window, document));
+</script>
