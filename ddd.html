@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function getLuckNum(inputNum) {
+var arr = [], i = 0;
+do {
+i++;
+var strArr = i.toString().split('');
+console.log(strArr);
+var isLuckNum = true;
+for (var j in strArr) {
+if (strArr[j] != 4 && strArr[j] != 7) {
+isLuckNum = false;
+}
+}
+if (isLuckNum) {
+arr.push(i);
+if (arr.length == inputNum) { break; }
+}
+} while (true);
+return arr[inputNum - 1];
+}
+
+console.log(getLuckNum(7));//444
+/*function getLuckNum(inputNum) {
+    var arr = [],i = 0;
+    do {
+        i++;
+        if (/^[4|7]+$/.test(i.toString())) {
+            arr.push(i);
+            if (arr.length == inputNum) {break;}
+        }
+    } while (true);
+    return arr[inputNum - 1];
+}
+console.log(getLuckNum(7));//444*/
+</script>
+</body>
+</html>

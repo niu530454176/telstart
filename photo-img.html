@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 980px;
+            height: 380px;
+            overflow: hidden;
+            margin: auto;
+            position: relative;
+        }
+        #box a{
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255,255,255,0.1);
+            position:  absolute;
+            top: 155px;
+            font-weight: bold;
+            font-size: 70px;
+            line-height: 40px;
+            text-decoration: none;
+            color: #000000;
+            border-radius: 50%;
+        }
+        #box .right {
+            right: 0;
+        }
+        #box img{
+            display: none;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <a class="left" href="#">&lt;</a>
+    <a class="right" href="#">&gt;</a>
+    <img class="imgS" src="image/banner1.jpg">
+    <img class="imgS" src="image/banner2.jpg">
+    <img class="imgS" src="image/banner3.jpg">
+    <img class="imgS" src="image/banner4.jpg">
+    <img class="imgS" src="image/banner5.jpg">
+    <img class="imgS" src="image/banner6.jpg">
+    <img class="imgS" src="image/banner7.jpg">
+    <img class="imgS" src="image/banner8.jpg">
+    <img class="imgS" src="image/banner9.jpg">
+</div>
+<script>
+    var box = document.getElementById('box');
+    var arr1 = [];
+    for (var i = 0; i < box.childNodes.length; i++) {
+        if (box.childNodes[i].nodeType != 3) {
+            arr1.push(box.childNodes[i]);
+        }
+    }
+    arr1[2].style.display = 'block';
+    var k = 2;
+    arr1[1].addEventListener('click', function () {
+        arr1[k].style.display = 'none';
+        k++;
+        if (k == arr1.length) {
+            k = 2;
+        }
+        arr1[k].style.display = 'block';
+    });
+    arr1[0].addEventListener('click', function () {
+        arr1[k].style.display = 'none';
+        if (k == 2) {
+            k = arr1.length;
+        }
+        k--;
+        arr1[k].style.display = 'block';
+    });
+</script>
+</body>
+</html>

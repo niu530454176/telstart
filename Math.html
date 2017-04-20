@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*    var arr = [1,2,3,4,4,6,7,8,9];
+    console.log(Math.PI);//返回π
+    console.log(Math.sin(90));//正弦
+    console.log(Math.abs(-1));//返回绝对值
+    console.log(Math.ceil(2.3));//向上取整
+    console.log(Math.floor(2.3));//向下取整
+    console.log(Math.max(1, 2, 3, 4, 6, 7, 8, 9));//返回最大值
+    console.log(Math.max.apply(this, arr));//apply数组转换为数字
+    console.log(Math.min(1, 2, 3, 4, 6, 7, 8, 9));//返回最小值
+    console.log(Math.min.apply(null, arr));
+    console.log(Math.pow(2, 4));//2的4次方
+    console.log(Math.sqrt(4));//返回4 的平方根
+    console.log(Math.sqrt(16));//返回4 的平方根
+    console.log(Math.round(-2.5));
+    console.log(Math.round(2.5));
+    console.log(Math.round(-2.4));*/
+
+//    console.log(parseInt(Math.random() * 26) +1);
+
+/*    var numM = console.log(Math.floor(Math.random() * (10 - 5 + 1) + 5));
+    for (var i = 0; i < 100; i++) {
+         var num = parseInt(Math.random() * 10 + 1);
+        console.log(num);
+        console.log(numM);
+    }*/
+    //生成随机数n~m之间
+/*    function getRanDom(n,m) {
+        return Math.floor(Math.random() * (m - n + 1) + n);
+    }*/
+/*    function getRandomStr(len, m) {
+        var str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        function getRanDom(nn, mm) {
+            return Math.floor(Math.random() * (mm - nn + 1) + nn);
+        }
+        var arr = [];
+        for (var j = 0; j < len; j++) {
+            arr.push(str.charAt(getRanDom(0, m)));
+        }
+        return arr.join('');
+    }
+    console.log(getRandomStr(4, 62));
+    document.body.style.backgroundColor = '#' + getRandomStr(6, 16);*/
+    //ascii码生成
+//2、生成4位字母数字的验证码,ASCII中大写字母65-90，小写字母97-122，数字48-57
+/*    var result = [];
+    for(var i=0;i<4;i++) {
+        var temp = [];
+        temp[0]= String.fromCharCode(Math.floor(Math.random()*26+65)); //存放大写字母
+        temp[1]= String.fromCharCode(Math.floor(Math.random()*26+97)); //存放小写字母
+        temp[2]= String.fromCharCode(Math.floor(Math.random()*10+48)); //存放数字
+        var n = Math.floor(Math.random()*3);
+        result[i] = temp[n];
+    }
+    document.write('<h3>2、生成4位字母数字的验证码</h3>');
+    document.write(result.join(''));
+    document.write('<hr/>');*/
+//    console.log(Math.random().toString(36).toUpperCase().substr(-6));
+
+    //随机颜色
+/*    var r = Math.floor(Math.random()*256);
+    var g = Math.floor(Math.random()*256);
+    var b = Math.floor(Math.random()*256);
+    var a = Math.random(); //保留一位小数
+    document.body.style.background = 'rgba('+ r + ',' + g + ',' + b + ',' + a + ')';*/
+
+    //数组方法
+/*    var arr=[];
+    for(var i=0;i<3;i++){
+        var x=Math.floor(Math.random() * 256);
+        arr.push(x);
+    }
+    document.body.style.background='rgb('+arr+')';
+    console.log(arr);*/
+
+    //随机长度字符串
+    function getRandomStr(len) {
+        var resultStr = '';
+        var one = '';
+        for(var i = 0; i < len; i++) {
+            one = Math.random().toString(36)[2];
+            if(Math.random() > 0.5) {
+                one = one.toUpperCase();
+            }
+            resultStr += one;
+        }
+        return resultStr;
+    }
+
+    var str = getRandomStr(30);
+    console.log(str);
+</script>
+</body>
+</html>

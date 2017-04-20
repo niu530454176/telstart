@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="menu-wrap">
+    <a href="#none">系统设置</a>
+    <div class="menu">
+        <ul>
+            <li>系统状态</li>
+            <li>系统运行时间</li>
+            <li>语言设置</li>
+        </ul>
+    </div>
+</div>
+<div class="menu-wrap">
+    <a href="#none">新闻管理</a>
+    <div class="menu">
+        <ul>
+            <li>添加新闻</li>
+            <li>修改新闻</li>
+            <li>删除新闻</li>
+        </ul>
+    </div>
+</div>
+<div class="menu-wrap">
+    <a href="#none">订单管理</a>
+    <div class="menu">
+        <ul>
+            <li>发货管理</li>
+            <li>查询订单</li>
+            <li>打印订单</li>
+        </ul>
+    </div>
+</div>
+<div class="menu-wrap">
+    <a href="#none">员工管理</a>
+    <div class="menu">
+        <ul>
+            <li>添加员工</li>
+            <li>修改信息</li>
+            <li>查看信息</li>
+        </ul>
+    </div>
+</div>
+<div class="menu-wrap">
+    <a href="#none">密码管理</a>
+    <div class="menu">
+        <ul>
+            <li>密码设置</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+
+    var menuWraps = document.getElementsByClassName('menu-wrap');
+
+    for (var i = 0; i < menuWraps.length; i++) {
+        menuWraps[i].addEventListener('click', function (e) {
+            var menuWrap = e.target.parentNode;
+            var menu = menuWrap.getElementsByClassName('menu')[0];
+            if (menu) {
+                var display = getStyle(menu, 'display');
+                menu.style.display = display == 'none' ? 'block' : 'none';
+            }
+        });
+    }
+
+    function getStyle(obj, attr) {
+        if (obj.currentStyle) {
+            return obj.currentStyle[attr];
+        } else {
+            return getComputedStyle(obj, "伪类")[attr];
+        }
+    }
+</script>
+
+</body>
+</html>

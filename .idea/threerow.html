@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        /*绝对定位实现左右固定，中间自适应*/
+        /*Start*/
+        /*        .container{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                }
+                .left{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 400px;
+                    height: 800px;
+                    background-color: black;
+                }
+                .center{
+                    height: 1000px;
+                    background-color: yellow;
+                }
+                .right{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 400px;
+                    height: 900px;
+                    background-color: red;
+                }*/
+        /*End*/
+
+        /*flex实现两边固定中间自适应*/
+        /*start*/
+/*        .container{
+            display: flex;
+            width: 100%;
+        }
+        .right, .left{
+            width: 200px;
+            height: 400px;
+            background: #f0f;
+        }
+        .center{
+            flex: 1;
+            background: #0f0;
+        }*/
+        /*end*/
+
+        /*浮动实现两边固定中间自适应*/
+        /*start*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            clear: both;
+            overflow: hidden;
+            width: 100%;
+            font-size: 0;
+            background: #00f;
+        }
+        .container .left, .container .right{
+            width: 200px;
+            height: 200px;
+            background: #0f0;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .center{
+            display: inline-block;
+            overflow: hidden;
+            word-wrap:break-word;
+            word-break:normal;
+            width: auto;
+            background: #f00;
+            height: 200px;
+        }
+        /*end*/
+
+
+    </style>
+</head>
+<body>
+<!--    <div class="container">
+        <div class="left">this is left</div>
+        <div class="center">this is center this is center this is center this is center this is center this is center this is center this is center this is center</div>
+        <div class="right">this is right</div>
+    </div>-->
+    <script>
+
+        //提取数字相加负数当做false处理
+/*        var str = 'sdkjf67 67sdf sfs';
+        function numberAnd(str) {
+            var arr1 = str.split('');
+            var arr = [];
+            for (var i = 0; i < arr1.length; i++) {
+                if (arr1[i] == ' ') {
+                    arr.push(arr[i].replace(arr[i], '_'));
+                } else{
+                    arr.push(arr[i]);
+                }
+            }
+            var arr2 = [];
+            for (var i in arr) {
+                if (!isNaN(arr[i-1]) && isNaN(arr[i])) {
+                    arr2.push(arr[i].replace(arr[i], '_'))
+                } else{
+                    arr2.push(arr[i]);
+                }
+            }
+            var arr3 = [];
+            for (var j in arr2) {
+                if (arr2[j] == '_' || !isNaN(arr2[j])) {
+                    arr3.push(arr2[j])
+                }
+            }
+            var str1 = arr3.join('');
+            var arr4 = str1.split('_');
+            var num = 0;
+            for (var k = 0; k < arr4.length; k++) {
+                if (!isNaN(parseInt(arr4[k]))) {
+                    num = num + parseInt(arr4[k]);
+                }
+            }
+            console.log(num);
+        }
+        numberAnd(str);
+
+                function Hero(heroName) {
+         this.name = heroName;
+         this.sayName = function () {
+         alert(this.name);
+         }
+         }
+         var baoluo = new Hero('保罗');
+         console.log(baoluo.name);;//保罗
+         baoluo.sayName();
+         console.log(baoluo.constructor  === Hero);*/
+
+
+/*        var someObj = {
+            name:'huang1',
+            sayName:function(who) {
+                return who + ',' + this.Name;
+            }
+        }
+        someObj.sayName();
+        var myObj = {name: 'huang2'};
+        someObj.sayName.call(myObj, '小王', '小张');
+        someObj.sayName.apply(myObj, ['xiaowang', '小张']);*/
+
+
+/*        function getSum() {
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum = sum + arguments[i];
+            }
+            return sum;
+        }
+        getSum(1, 2, 3)*/
+
+/*        var arr = [
+            {name: '张三', money: 1, count: 1},
+            {name: '李四', money: 14, count: 12},
+            {name: '王五', money: 451, count: 42},
+            {name: '歧梦秋', money: 71, count: 2},
+            {name: '随淼淼', money: 22, count: 8},
+            {name: '庹雅凡', money: 6, count: 2},
+            {name: '库乐天', money: 82, count: 40},
+            {name: '贝自珍', money: 99, count: 2}
+        ];
+        arr.sort(function (a, b) {
+            if(a.count == b.count) {
+                return a.money > b.money;
+            } else {
+                return a.count > b.count;
+            }
+        });
+        console.log(arr);*/
+
+        var str = 'cbaacgdfeaebb';
+        function shao(str) {
+            var num1 = 0, arr = [];
+            for (var i = 0; i < str.length; i++) {
+                for (var ii = 0; ii < str.length; ii++) {
+                    if (str[i] == str[ii] ) {
+                        num1 = num1 + 1;
+                    }
+                }
+                arr.push(num1 + str[i]);
+                num1 = 0;
+            }
+            arr.sort(arr);//返回["1d", "1f", "2c", "2c", "2e", "2e", "3a", "3a", "3a", "3b", "3b", "3b"]
+            var str1 = arr[0][1];
+            if (arr[0][0] == arr[1][0]) {
+                for (var k = 1; k < arr.length; k++) {
+                    if (arr[0][0] == arr[k][0])
+                        num1++;
+                }
+                for (var j = 0; j <= num1; j++) {
+                    for (var jj = 0; jj < num1; jj++) {
+                        if(str.indexOf(arr[j][1]) <= str.indexOf(arr[jj][1])){
+                            str1 = arr[j][1];
+                            break;
+                        } else {
+                            str1 = arr[jj][1];
+                        }
+                    }
+                }
+            }
+            console.log(str1);
+        }
+        shao(str);
+//        console.log(shao(str));
+
+//        ie8++以上兼容
+/*        document.querySelector();
+        document.querySelectorAll();
+        */
+
+
+        var someObj = {
+            name:'huang1',
+            age : 'sdf',
+            sayName:function(who) {
+                return who + ',' + this.Name;
+            }
+        }
+
+    </script>
+</body>
+</html>
+
+
